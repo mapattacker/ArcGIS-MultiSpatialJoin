@@ -8,14 +8,14 @@ def unique(table, field):
         listset = set([row[0] for row in cursor]) # remove duplicates
         return list(listset)
 
-table = "C:\Users\fake\Documents\ArcGIS\singapore.gdb\main"
+table = "C:\Users\jake\Documents\ArcGIS\singapore.gdb\main"
 field = 'field_name'
 listset = unique(table, field)
 
 
 
 # for each value in list, create definition query based on each field value
-workspace = "C:\Users\siyang\Documents\ArcGIS\\nearest.gdb"
+workspace = "C:\Users\jake\Documents\ArcGIS\\singapore.gdb"
 for num, i in enumerate(listset, 1):
     # where clause for definition query for each layer
     where = "field_name = '{}'".format(i)
